@@ -20,22 +20,22 @@
     </ul>
 </div>
 
-<div class="hug units-row">
+<div class="hug page-content units-row">
 
     <?php
-    if ( have_posts() ) :
-        while ( have_posts() ) : the_post();
-    ?>
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+        ?>
 
-    <?php the_content(); ?>
-            
-    <?php
-        endwhile;
+        <?php the_content(); ?>
+                
+        <?php
+            endwhile;
 
-    else :
-        echo "Something is going wrong.";
+        else :
+            echo "Something is going wrong.";
 
-    endif;
+        endif;
     ?>
 
 </div>
